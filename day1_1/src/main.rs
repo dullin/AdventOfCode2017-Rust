@@ -13,9 +13,10 @@ fn main() {
                         .collect();
 
     //Check for consequent digits
-    let mut last = num_array.last().unwrap();
+    //Note : last returns an address
+    let mut last = *num_array.last().unwrap();
     let mut sum = 0;
-    for i in &num_array {
+    for i in num_array {
         if i == last {
             sum += i;
         }
