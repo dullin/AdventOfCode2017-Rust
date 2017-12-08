@@ -27,9 +27,7 @@ mod tests {
 
     #[test]
     fn test_1() {
-        let mut file = File::open("datatest.txt").unwrap();
-        let mut contents = String::new();
-        file.read_to_string(&mut contents).unwrap();
+        let contents = include_str!("../datatest.txt");
 
         let num_array = parse(&contents);
 
