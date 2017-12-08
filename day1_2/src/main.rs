@@ -1,6 +1,3 @@
-use std::fs::File;
-use std::io::prelude::*;
-
 fn main() {
     // Read file into a string
     let contents = include_str!("../data.txt");
