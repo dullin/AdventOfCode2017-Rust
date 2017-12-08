@@ -3,9 +3,7 @@ use std::io::prelude::*;
 
 fn main() {
     // Read file into a string
-    let mut file = File::open("data.txt").unwrap();
-    let mut contents = String::new();
-    file.read_to_string(&mut contents).unwrap();
+    let contents = include_str!("../data.txt");
 
     //Convert string into array of digits
     let num_array:Vec<u32> = contents.chars()
